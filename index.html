@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Search Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom">
+        <div class="container-fluid">
+            <a href="#" class="navbar-logo">
+                <img src="Images/Logo.jpg" class="navbar-logo" alt="Website Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="openPopup()">Search</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" id="authLink" onclick="handleAuth()">Login/Signup</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="openReviewPopup()">Rate Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+<main>
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="auto-slideshow">
+            <img src="Images/Image1.jpg" alt="Image 1">
+            <img src="Images/Image2.jpg" alt="Image 2">
+            <img src="Images/Image3.jpg" alt="Image 3">
+            <img src="Images/Image4.jpg" alt="Image 4">
+            <img src="Images/Image5.jpg" alt="Image5">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="About" class="about-section">
+        <h1>ABOUT</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>The Image Search Application allows users to find images quickly by simply entering keywords, delivering relevant results with an easy-to-navigate interface.</p>
+                <p>With access to a vast image database, the app provides high-quality previews and essential metadata like dimensions and sources. Users can easily identify the best image options across various devices.</p>
+                <p>Additional features, such as recent search history and a bookmark option, enhance user experience, making it simple to find, view, and save images for later use.</p>
+            </div>
+          <div class="about-image">
+                <img src="Images/Mountains.avif" alt="Mountains">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Features</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="Images/Info2.jpg" class="card-img-top" alt="Feature 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Fast Image Search</h5>
+                            <p class="card-text">Quickly find images by entering keywords, making your search experience seamless.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="Images/Info1.jpg" class="card-img-top" alt="Feature 2">
+                        <div class="card-body">
+                            <h5 class="card-title">High-Quality Previews</h5>
+                            <p class="card-text">View high-quality image previews and essential metadata at a glance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <img src="Images/Info3.jpg" class="card-img-top" alt="Feature 3">
+                        <div class="card-body">
+                            <h5 class="card-title">User-Friendly Interface</h5>
+                            <p class="card-text">Experience a clean and intuitive interface designed for easy navigation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="social-icons">
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-youtube"></i>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-github"></i>
+    </div>
+    <p>&copy; Peddi Charan. Batch 39 FSD students. All rights reserved.</p>
+</footer>
+
+<!-- Popup Container -->
+<div class="popup-container" id="popupContainer">
+    <div class="popup" id="popup">
+        <h2>To access this website, you need to log in</h2>
+        <a href="signup.html"><button type="submit">Login</button></a>
+        <button type="button" onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+
+<!-- Review Popup Modal -->
+<div id="reviewPopup" class="popup-modal">
+    <div class="popup-content">
+        <span class="close" onclick="closeReviewPopup()">&times;</span>
+        <h2>Rate Us</h2>
+        <div class="review-container">
+            <div class="stars" id="starRating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <textarea id="reviewText" rows="4" placeholder="Write your review..."></textarea>
+            <button id="submitReview" onclick="submitReview()">Submit</button>
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                Thank you for your feedback! <button onclick="closeThankYou()">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-wtGuE99nGBH21QwJ7yZ2IM1clWfWvT54zE26tZW0U5Fep04h7y47Wh7W6m1zPmXa" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+

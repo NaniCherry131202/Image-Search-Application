@@ -1,0 +1,184 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+/*body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}*/
+/* Navbar */
+.navbar-logo {
+    width: 120px;
+    height: 80px;
+}
+.custom {
+    background-color: #1e3a5f;
+    color: white;
+}
+.nav-item {
+    
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.nav-link:hover {
+    color: #ffbc42;
+}
+.nav-link{
+    color: white;
+}
+/* Section Styling */
+.container-fluid1 {
+    background-color: aliceblue; 
+    color: #1e3a5f; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;  
+}
+
+/* Heading styling */
+h1 {
+    color: #ffbc42; /* Accent color for heading */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px #1e1e1e;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#search-input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ffbc42; /* Accent border color */
+    border-radius: 8px;
+    width: 250px;
+    color: #1e3a5f; /* Darker color for input text */
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+#search-button {
+    padding: 12px 20px;
+    background-color: #ffbc42; /* Accent button color */
+    color: #1e3a5f; /* Darker button text for contrast */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #e57c00;
+}
+
+/* Search results styling */
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.search-result {
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-result:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.search-result img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-result a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #ffbc42; /* Accent color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.search-result a:hover {
+    color: #e57c00;
+}
+
+/* Show more button styling */
+#show-more-button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #ffbc42;
+    color: #1e3a5f; /* Dark text for contrast */
+    border: none;
+    border-radius: 8px;
+    display: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#show-more-button:hover {
+    background-color: #e57c00;
+}
+.like-btn i {
+    color: rgb(251, 246, 246);
+    border: none; /* default color */
+}
+
+.like-btn.liked i {
+    color: red;
+    border: none; /* color when liked */
+}
+
+
+/* Footer */
+.footer {
+    padding: 40px 30px;
+    background-color: #1e3a5f;
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+.social-icons .bi {
+    font-size: 24px;
+    color: aliceblue;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+.social-icons .bi:hover {
+    color: #ffbc42;
+}
+.footer p {
+    font-size: 18px;
+}
